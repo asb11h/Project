@@ -11,7 +11,7 @@
 	<meta name="author" content="Mark K. Jowett, Ph.D.">
 	<link rel="icon" href="favicon.ico">
 
-	<title>CRSXXXX - Project2</title>
+	<title>LIS4368 - Project2</title>
 
 <!-- Include FontAwesome CSS to use feedback icons provided by FontAwesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -70,7 +70,15 @@
 								<tr>
 									<th>Fname</th>
 									<th>Lname</th>
+									<th>Street</th>
+									<th>City</th>
+									<th>State</th>
+									<th>Zip</th>
+									<th>Phone</th>
 									<th>Email</th>
+									<th>Balance</th>
+									<th>Total Sales</th>
+									<th>Notes</th>
 								</tr>
 							</thead>
 
@@ -80,7 +88,15 @@
 								<tr>
 									<td><c:out value="${customer.fname}" /></td>
 									<td><c:out value="${customer.lname}" /></td>
+									<td><c:out value="${customer.street}" /></td>
+									<td><c:out value="${customer.city}" /></td>
+									<td><c:out value="${customer.state}" /></td>
+									<td><c:out value="${customer.zip}" /></td>
+									<td><c:out value="${customer.phone}" /></td>
 									<td><c:out value="${customer.email}" /></td>
+									<td><c:out value="${customer.balance}" /></td>
+									<td><c:out value="${customer.totalSales}" /></td>
+									<td><c:out value="${customer.notes}" /></td>
 
 									<!-- Create form buttons and hidden input fields to pass data.  //-->
 									<td>

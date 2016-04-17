@@ -58,7 +58,15 @@ public class CustomerServlet extends HttpServlet {
 
 					String firstName = request.getParameter("fname");
 					String lastName = request.getParameter("lname");
-					String email = request.getParameter("email");
+					String street = request.getParameter("street");
+            		String city = request.getParameter("city");
+            		String state = request.getParameter("state");
+            		String zip = request.getParameter("zip");
+            		String phone = request.getParameter("phone");
+            		String email = request.getParameter("email");
+            		String balance = request.getParameter("balance");
+            		String totalSales = request.getParameter("total_sales");
+            		String notes = request.getParameter("notes");
 
 					//instantiate new customer object with associated object variable (customer)
 					Customer customer = new Customer(id, firstName, lastName, street, city, state, zip, phone, email, balance, totalSales, notes);
@@ -96,14 +104,30 @@ public class CustomerServlet extends HttpServlet {
             // get parameters from the request
 				 String firstName = request.getParameter("fname");
 				 String lastName = request.getParameter("lname");
-				 String email = request.getParameter("email");
+				 String street = request.getParameter("street");
+            	 String city = request.getParameter("city");
+            	 String state = request.getParameter("state");
+            	 String zip = request.getParameter("zip");
+            	 String phone = request.getParameter("phone");
+            	 String email = request.getParameter("email");
+            	 String balance = request.getParameter("balance");
+            	 String totalSales = request.getParameter("total_sales");
+            	 String notes = request.getParameter("notes");
 
             // get and update customer
             Customer customer = (Customer) session.getAttribute("customer");        
 
             customer.setFname(firstName);
             customer.setLname(lastName);
+            customer.setFname(street);
+            customer.setLname(city);
+            customer.setEmail(state);
+            customer.setFname(zip);
+            customer.setLname(phone);
             customer.setEmail(email);
+            customer.setFname(balance);
+            customer.setLname(totalsales);
+            customer.setEmail(notes);
 
 				 url = "/modify.jsp";
             // update customer				 

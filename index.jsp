@@ -11,7 +11,7 @@
 	<meta name="author" content="Mark K. Jowett, Ph.D.">
 	<link rel="icon" href="favicon.ico">
 
-	<title>CRSXXXX - Project2</title>
+	<title>LIS4368 - Project2</title>
 
 <!-- Include FontAwesome CSS to use feedback icons provided by FontAwesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -73,9 +73,65 @@
 						</div>
 						
 						<div class="form-group">
+							<label class="col-sm-3 control-label">Street:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="30" name="street" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">City:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="30" name="city" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">State:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="2" name="state" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Zip:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="9" name="zip" />
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Phone:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="10" name="phone"  />
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-sm-3 control-label">Email:</label>
 							<div class="col-sm-5">
 								<input type="text" class="form-control" maxlength="100" name="email" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Balance:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="7" name="balance" />
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Total Sales:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="7" name="total_sales" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Notes:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control" maxlength="255" name="notes" />
 							</div>
 						</div>
 						

@@ -31,7 +31,7 @@ ic.lookup("java:/comp/env/jdbc/yourfsuid")
     private ConnectionPool() {
         try {
             InitialContext ic = new InitialContext();
-            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/yourfsuid");
+            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/asb11h");
         } catch (NamingException e) {
             System.out.println(e);
         }

@@ -13,13 +13,21 @@ public class CustomerDB {
         PreparedStatement ps = null;
 				//unfortunately, JDBC doesn't make it easy to use named parameters (:name) instead of indices. :(
         String query
-					= "INSERT INTO customer (cus_fname, cus_lname, cus_email) "
-                + "VALUES (?, ?, ?)";
+					= "INSERT INTO customer (cus_fname, cus_lname, cus_street, cus_city, cus_state, cus_zip, cus_phone, cus_email, cus_balance, cus_total_sales, cus_notes) "
+                + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             ps = connection.prepareStatement(query);
             ps.setString(1, customer.getFname());
             ps.setString(2, customer.getLname());
-            ps.setString(3, customer.getEmail());
+            ps.setString(3, customer.getStreet());
+            ps.setString(4, customer.getCity());
+            ps.setString(5, customer.getState());
+            ps.setString(6, customer.getZip());
+            ps.setString(7, customer.getPhone());
+            ps.setString(8, customer.getEmail());
+            ps.setString(9, customer.getBalance());
+            ps.setString(10, customer.getTotalSales());
+            ps.setString(11, customer.getNotes());
 						
             return ps.executeUpdate();
         } catch (SQLException e) {
@@ -39,12 +47,28 @@ public class CustomerDB {
         String query = "UPDATE customer SET "
                 + "cus_fname = ?, "
                 + "cus_lname = ?, "
-                + "cus_email = ?, ";
+                + "cus_street = ?, "
+                + "cus_city = ?, "
+                + "cus_state = ?, "
+                + "cus_zip = ?, "
+                + "cus_phone = ?, "
+                + "cus_email = ?, "
+                + "cus_balance = ?, "
+                + "cus_total_sales = ?, "
+                + "cus_notes = ?, ";
         try {
             ps = connection.prepareStatement(query);
             ps.setString(1, customer.getFname());
             ps.setString(2, customer.getLname());
-            ps.setString(3, customer.getEmail());
+            ps.setString(3, customer.getStreet());
+            ps.setString(4, customer.getCity());
+            ps.setString(5, customer.getState());
+            ps.setString(6, customer.getZip());
+            ps.setString(7, customer.getPhone());
+            ps.setString(8, customer.getEmail());
+            ps.setString(9, customer.getBalance());
+            ps.setString(10, customer.getTotalSales());
+            ps.setString(11, customer.getNotes());
 						
             return ps.executeUpdate();
         } catch (SQLException e) {
@@ -92,7 +116,15 @@ public class CustomerDB {
 					 customer.setId(id);								
 					 customer.setFname(rs.getString("cus_fname"));
 					 customer.setLname(rs.getString("cus_lname"));
-					 customer.setEmail(rs.getString("cus_email"));
+					 customer.setStreet(rs.getString("cus_street"));
+                     customer.setCity(rs.getString("cus_city"));
+                     customer.setState(rs.getString("cus_state"));
+                     customer.setZip(rs.getString("cus_zip"));
+                     customer.setPhone(rs.getString("cus_phone"));
+                     customer.setEmail(rs.getString("cus_email"));
+                     customer.setBalance(rs.getString("cus_balance"));
+                     customer.setTotalSales(rs.getString("cus_total_sales"));
+                     customer.setNotes(rs.getString("cus_notes"));
             }
             return customer;
         } catch (SQLException e) {
@@ -122,7 +154,15 @@ public class CustomerDB {
                 customer.setId(rs.getString("cus_id"));								
                 customer.setFname(rs.getString("cus_fname"));
                 customer.setLname(rs.getString("cus_lname"));
+                customer.setStreet(rs.getString("cus_street"));
+                customer.setCity(rs.getString("cus_city"));
+                customer.setState(rs.getString("cus_state"));
+                customer.setZip(rs.getString("cus_zip"));
+                customer.setPhone(rs.getString("cus_phone"));
                 customer.setEmail(rs.getString("cus_email"));
+                customer.setBalance(rs.getString("cus_balance"));
+                customer.setTotalSales(rs.getString("cus_total_sales"));
+                customer.setNotes(rs.getString("cus_notes"));
                 customers.add(customer);
             }
             return customers;

@@ -12,7 +12,7 @@
 	<meta name="author" content="Mark K. Jowett, Ph.D.">
 	<link rel="icon" href="favicon.ico">
 
-	<title>CRSXXXX - Project2</title>
+	<title>LIS4368 - Project2</title>
 
 <!-- Include FontAwesome CSS to use feedback icons provided by FontAwesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -59,7 +59,15 @@
 			<% //<c:out... prevents cross-site scripting (XSS) attack (escapes output) %>
 			<label>FName:</label> <c:out value="${customer.fname}" /> <br />
 			<label>LName:</label> <c:out value="${customer.lname}" /> <br />
+			<label>Street:</label> <c:out value="${customer.street}" /> <br />
+			<label>City:</label> <c:out value="${customer.city}" /> <br />
+			<label>State:</label> <c:out value="${customer.state}" /> <br />
+			<label>Zip:</label> <c:out value="${customer.zip}" /> <br />
+			<label>Phone:</label> <c:out value="${customer.phone}" /> <br />
 			<label>Email:</label> <c:out value="${customer.email}" /> <br />
+			<label>Balance:</label> <c:out value="${customer.balance}" /> <br />
+			<label>TotalSales:</label> <c:out value="${customer.totalSales}" /> <br />
+			<label>Notes:</label> <c:out value="${customer.notes}" /> <br />
 
 			<form action="customerAdmin" method="post">
 				<% // goes to admin/CustomerServlet.java %>

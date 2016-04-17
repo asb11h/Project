@@ -7,7 +7,7 @@
 
 ## Anthony Bethany
 
-### A5 Requirements:
+### p2 Requirements:
 1. Do questions first!
 2. Add assignment requirements to README.md
 3. Add screenshots to README.md
@@ -28,8 +28,8 @@
 
 *README.md file should include the following items:*
 
-1. Provide Bitbucket read-only access to a5 repo, *must* include README.md, using Markdown syntax, which displays assignment requirements, screenshots of pre-, post-valid user form entry.
-2. Blackboard Links: a5 Bitbucket repo
+1. Provide Bitbucket read-only access to p2 repo, *must* include README.md, using Markdown syntax, which displays assignment requirements, screenshots of pre-, post-valid user form entry.
+2. Blackboard Links: p2 Bitbucket repo
 
 #### Assignment Screenshots:
 
@@ -41,4 +41,4 @@
 
 #### Links:
 
-1. *A5* [http://localhost:9999/lis4368a5/index.jsp](http://localhost:9999/lis4368a5/index.jsp)
+1. *p2* [http://localhost:9999/lis4368p2/index.jsp](http://localhost:9999/lis4368p2/index.jsp)
