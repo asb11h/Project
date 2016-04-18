@@ -33,7 +33,7 @@
 
 #### Assignment Screenshots:
 
-*Screenshot of valid insert, successful insert, and proof of insert*:
+*Screenshot of valid insert, passed insert, data display, modify form, modified data, delete warning, and proof of changes*:
 
 ![an example of a valid insert](img/valid.png)
 ![an example of a passed validation](img/passed.png)
