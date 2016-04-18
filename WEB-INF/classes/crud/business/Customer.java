@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 //Reality-check: zip should be int, phone long, balance and totalSales BigDecimal data types
 public class Customer implements Serializable {
-	private String fname;
+	private String id;
+    private String fname;
 	private String lname;
 	private String street;
     private String city;
@@ -19,7 +20,8 @@ public class Customer implements Serializable {
 	//default constructor
 	public Customer()
 	{
-			fname = "";
+			id = "";
+            fname = "";
 			lname = "";
 			street = "";
         	city = "";
@@ -35,13 +37,14 @@ public class Customer implements Serializable {
 	//constructor with parameters
 	public Customer
 		(
-		 String parFirstName, String parLastName, String parStreet, 
+		 String parId, String parFirstName, String parLastName, String parStreet, 
 		 String parCity, String parState, String parZip, 
 		 String parPhone, String parEmail, 
          String parBalance, String parTotalSales, String parNotes
 		 )
 	{
-			this.fname = parFirstName;
+			this.id = parId;
+            this.fname = parFirstName;
 			this.lname = parLastName;
 			this.street = parStreet;
         	this.city = parCity;
@@ -73,7 +76,15 @@ http://download.oracle.com/otndocs/jcp/7224-javabeans-1.01-fr-spec-oth-JSpec/
 
 	//getter/setter methods:	
 
-	//fname
+	//id
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String parId) {
+        this.id = parId;
+    }
+
     public String getFname() {
         return fname;
     }

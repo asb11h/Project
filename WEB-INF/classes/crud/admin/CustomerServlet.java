@@ -55,7 +55,7 @@ public class CustomerServlet extends HttpServlet {
             // get parameters from the request (data conversions not required here)
 					//Reality-check: zip should be int, phone long, balance and totalSales BigDecimal data types
 					//getParameter() method accepts values from form control *name* attribute
-
+            		String id = request.getParameter(null);
 					String firstName = request.getParameter("fname");
 					String lastName = request.getParameter("lname");
 					String street = request.getParameter("street");
@@ -116,18 +116,18 @@ public class CustomerServlet extends HttpServlet {
 
             // get and update customer
             Customer customer = (Customer) session.getAttribute("customer");        
-
+            customer.setId(cid);
             customer.setFname(firstName);
             customer.setLname(lastName);
-            customer.setFname(street);
-            customer.setLname(city);
-            customer.setEmail(state);
-            customer.setFname(zip);
-            customer.setLname(phone);
+            customer.setStreet(street);
+            customer.setCity(city);
+            customer.setState(state);
+            customer.setZip(zip);
+            customer.setPhone(phone);
             customer.setEmail(email);
-            customer.setFname(balance);
-            customer.setLname(totalsales);
-            customer.setEmail(notes);
+            customer.setBalance(balance);
+            customer.setTotalSales(totalSales);
+            customer.setNotes(notes);
 
 				 url = "/modify.jsp";
             // update customer				 

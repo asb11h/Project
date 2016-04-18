@@ -66,7 +66,7 @@
 			<label>Phone:</label> <c:out value="${customer.phone}" /> <br />
 			<label>Email:</label> <c:out value="${customer.email}" /> <br />
 			<label>Balance:</label> <c:out value="${customer.balance}" /> <br />
-			<label>TotalSales:</label> <c:out value="${customer.totalSales}" /> <br />
+			<label>Total Sales:</label> <c:out value="${customer.totalSales}" /> <br />
 			<label>Notes:</label> <c:out value="${customer.notes}" /> <br />
 
 			<form action="customerAdmin" method="post">

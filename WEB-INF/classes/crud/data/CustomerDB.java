@@ -55,7 +55,8 @@ public class CustomerDB {
                 + "cus_email = ?, "
                 + "cus_balance = ?, "
                 + "cus_total_sales = ?, "
-                + "cus_notes = ?, ";
+                + "cus_notes = ? "
+                + "WHERE cus_id = ? ";
         try {
             ps = connection.prepareStatement(query);
             ps.setString(1, customer.getFname());
@@ -69,6 +70,7 @@ public class CustomerDB {
             ps.setString(9, customer.getBalance());
             ps.setString(10, customer.getTotalSales());
             ps.setString(11, customer.getNotes());
+            ps.setString(12, customer.getId());
 						
             return ps.executeUpdate();
         } catch (SQLException e) {
@@ -85,9 +87,11 @@ public class CustomerDB {
         Connection connection = pool.getConnection();
         PreparedStatement ps = null;
 
-        String query = "DELETE FROM customer ";
+        String query = "DELETE FROM customer "
+                        + "WHERE cus_id = ?";
         try {
             ps = connection.prepareStatement(query);
+            ps.setString(1, customer.getId());
 
             return ps.executeUpdate();
         } catch (SQLException e) {
@@ -105,10 +109,12 @@ public class CustomerDB {
         PreparedStatement ps = null;
         ResultSet rs = null;
 
-        String query = "SELECT * FROM customer ";
+        String query = "SELECT * FROM customer "
+            + "WHERE cus_id = ?";
+
         try {
             ps = connection.prepareStatement(query);
-
+            ps.setString(1, id);
             rs = ps.executeQuery();
             Customer customer = null;
             if (rs.next()) {
@@ -144,6 +150,7 @@ public class CustomerDB {
         ResultSet rs = null;
         
         String query = "SELECT * FROM customer";
+            
         try {
             ps = connection.prepareStatement(query);
             rs = ps.executeQuery();

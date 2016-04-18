@@ -28,12 +28,12 @@
         Connection, Statement, ResultSet, etc. objects that haven't been closed 
         -->
     <Resource
-				url="jdbc:mysql://localhost:3306/yourdatabase"				
+				url="jdbc:mysql://localhost:3306/asb11h"				
 				type="javax.sql.DataSource"
-				name="jdbc/yourfsuid"
+				name="jdbc/asb11h"
 				auth="Container"
-				username="yourmysqlusername"
-				password="yourmysqlpassword"
+				username="asb11h"
+				password="asb53093"
 				maxTotal="100"
 				maxIdle="30"
 				maxWaitMillis="10000"

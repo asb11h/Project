@@ -100,11 +100,22 @@
 
 									<!-- Create form buttons and hidden input fields to pass data.  //-->
 									<td>
-										<!-- edit button code goes here -->
+										<form id="edit_customer_form" class="form-horizontal" action="customerAdmin" method="post">
+											<input type="hidden" name="display_customer" value="${customer.id}" />
+											<input type="submit" value="Edit" />
+										</form><!-- edit button code goes here -->
 									</td>
 
 									<td>
-										<!-- delete button code goes here -->
+										<form 
+											onsubmit="return confirm('Do you really want to delete record?');"
+											id="edit_customer_form"
+											action="customerAdmin"
+											method="post">
+											<input type="hidden" name="delete_customer" value"${customer.id}" />
+											<input type="submit" value="Delete" />
+										</form>
+											<!-- delete button code goes here -->
 									</td>									
 									
 								</tr>
