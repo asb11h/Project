@@ -14,7 +14,7 @@
 
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="../index.jsp">CRSXXXX</a></li>
+					<li class="active"><a href="../index.jsp">LIS4368p2</a></li>
 					<li><a href="../a1/index.jsp">A1</a></li>
 					<li><a href="../a2/index.jsp">A2</a></li>
 					<li><a href="../a3/index.jsp">A3</a></li>

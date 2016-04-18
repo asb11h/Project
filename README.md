@@ -22,7 +22,7 @@
 
 1. MVC
 2. Compile
-3. Answer the following questions (Chs. 13 - 15)
+3. Answer the following questions (Chs. 16 - 17)
 
 #### README.md file should include the following items:
 
@@ -37,7 +37,11 @@
 
 ![an example of a valid insert](img/valid.png)
 ![an example of a passed validation](img/passed.png)
-![example of database insert](img/proof.png)
+![display data](img/display.png)
+![modify Form](img/modifyform.png)
+![Modified data](img/modified.png)
+![delete warning](img/delete.png)
+![display changes](img/changes.png)
 
 #### Links:
 
