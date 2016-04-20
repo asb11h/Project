@@ -112,7 +112,7 @@
 											id="edit_customer_form"
 											action="customerAdmin"
 											method="post">
-											<input type="hidsden" name="delete_customer" value="${customer.id}" />
+											<input type="hidden" name="delete_customer" value="${customer.id}" />
 											<input type="submit" value="Delete" />
 										</form>
 											<!-- delete button code goes here -->
